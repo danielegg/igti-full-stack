@@ -1,9 +1,5 @@
 window.addEventListener('load', start);
 
-let r = 0,
-  g = 0,
-  b = 0;
-
 function start() {
   const range_r = document.querySelector('#range-r');
   const range_g = document.querySelector('#range-g');
@@ -13,6 +9,10 @@ function start() {
   range_g.addEventListener('input', changeValueField);
   range_b.addEventListener('input', changeValueField);
 }
+
+let r = 0,
+  g = 0,
+  b = 0;
 
 function changeValueField(e) {
   function changeColor(field) {
