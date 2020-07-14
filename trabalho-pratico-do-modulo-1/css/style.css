@@ -1,0 +1,13 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.square {
+    background-color: rgb(0, 0, 0);
+    width: 120px;
+    height: 120px;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #cccccc;
+}
