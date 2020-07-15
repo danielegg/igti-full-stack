@@ -2,71 +2,80 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- Font Roboto -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <!-- Font Roboto -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet" />
 
-    <title>Trabalho Prático Módulo 1</title>
+  <title>Trabalho Prático Módulo 1</title>
 
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 mt-5 mb-5">
-                <h1 class="text-center">Trabalho Prático Módulo 1</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="row justify-content-md-center">
-                    <div class="col-md-2 text-right">
-                        <p>(R) Vermelho: </p>
-                        <p>(G) Verde: </p>
-                        <p>(B) Azul: </p>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="form-group">
-                            <input type="range" min="0" max="255" value="0" class="custom-range" id="range-r">
-                        </div>
-                        <div class="form-group">
-                            <input type="range" min="0" max="255" value="0" class="custom-range" id="range-g">
-                        </div>
-                        <div class="form-group">
-                            <input type="range" min="0" max="255" value="0" class="custom-range" id="range-b">
-                        </div>
-                    </div>
-                    <div class="col-md-1">
-                        <div class="form-group">
-                            <input type="text" class="form-control form-control-sm" id="field-r" value="0" readonly>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control form-control-sm" id="field-g" value="0" readonly>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control form-control-sm" id="field-b" value="0" readonly>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="square"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mt-5 mb-5">
+        <h1 class="text-center">Trabalho Prático Módulo 1</h1>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row justify-content-md-center">
+          <div class="col-md-2 text-right">
+            <p>(R) Vermelho:</p>
+            <p>(G) Verde:</p>
+            <p>(B) Azul:</p>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <input type="range" min="0" max="255" value="0" class="custom-range" id="range-r" />
+            </div>
+            <div class="form-group">
+              <input type="range" min="0" max="255" value="0" class="custom-range" id="range-g" />
+            </div>
+            <div class="form-group">
+              <input type="range" min="0" max="255" value="0" class="custom-range" id="range-b" />
+            </div>
+          </div>
+          <div class="col-md-1">
+            <div class="form-group">
+              <input type="text" class="form-control form-control-sm" id="field-r" value="0" disabled />
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control form-control-sm" id="field-g" value="0" disabled />
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control form-control-sm" id="field-b" value="0" disabled />
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="square"></div>
+            <span class="dolorum atque aspernatur">Est molestiae sunt facilis qui rem.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
 
-    <script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
