@@ -1,6 +1,6 @@
-window.addEventListener("load", start);
+window.addEventListener("load", init);
 
-function start() {
+function init() {
     const range_r = document.querySelector("#range-r");
     const range_g = document.querySelector("#range-g");
     const range_b = document.querySelector("#range-b");
@@ -14,28 +14,29 @@ let r = 0,
     g = 0,
     b = 0;
 
-function changeValueField(e) {
-    function changeColor(field) {
-        switch (field) {
-            case "range-r":
-                r = document.querySelector("#" + field).value;
-                break;
-            case "range-g":
-                g = document.querySelector("#" + field).value;
-                break;
-            case "range-b":
-                b = document.querySelector("#" + field).value;
-                break;
-            default:
-                break;
-        }
-        const square = document.querySelector(".square");
-        square.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
-    }
-
-    let field = e.target.id;
+function changeValueField(event) {
+    console.log(event.target);
+    let field = event.target.id;
     changeColor(field);
     field = field.replace("range", "field");
     let f = document.querySelector("#" + field);
-    f.value = e.target.value;
+    f.value = event.target.value;
+}
+
+function changeColor(field) {
+    switch (field) {
+        case "range-r":
+            r = document.querySelector("#" + field).value;
+            break;
+        case "range-g":
+            g = document.querySelector("#" + field).value;
+            break;
+        case "range-b":
+            b = document.querySelector("#" + field).value;
+            break;
+        default:
+            break;
+    }
+    const square = document.querySelector(".square");
+    square.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
 }
