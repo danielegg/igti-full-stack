@@ -33,7 +33,7 @@ window.addEventListener("load", () => {
 
 function disabledBtn() {
     const qntLetras = inputBusca.value.length;
-    if (qntLetras > 1) {
+    if (qntLetras > 0) {
         btnBusca.removeAttribute("disabled");
     } else {
         btnBusca.setAttribute("disabled", "disabled");
@@ -140,5 +140,7 @@ function estatisticas(resultSearchUsuarios) {
         qntMediaIdades.textContent = mediaIdades.toLocaleString("pt-BR", {
             maximumFractionDigits: 2
         });
+    } else {
+        qntMediaIdades.textContent = 0;
     }
 }
