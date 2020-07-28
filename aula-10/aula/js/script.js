@@ -6,21 +6,21 @@
 //let tem escopo reduzido
 
 function withVar() {
-  for (var i = 0; i < 10; i++) {
-    console.log('var' + i);
-  }
+    for (var i = 0; i < 10; i++) {
+        console.log('var' + i);
+    }
 
-  i = 20;
-  console.log(i);
+    i = 20;
+    console.log(i);
 }
 
 function withLet() {
-  for (let i = 0; i < 10; i++) {
-    console.log('let' + i);
-  }
+    for (let i = 0; i < 10; i++) {
+        console.log('let' + i);
+    }
 
-  //i = 20;
-  //console.log(i);
+    //i = 20;
+    //console.log(i);
 }
 
 withVar();
@@ -38,17 +38,17 @@ d.push(1);
 console.log(d);
 
 function sum(a, b) {
-  return a + b;
+    return a + b;
 }
 
 //função anônima
 const sum2 = function(a, b) {
-  return a + b;
+    return a + b;
 };
 
 //arrow function
 const sum3 = (a, b) => {
-  return a + b;
+    return a + b;
 };
 
 //arrow function reduzida
