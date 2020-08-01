@@ -1,40 +1,40 @@
-import {promises as fs} from "fs";
+import { promises as fs } from 'fs';
 
 init();
 writeReadJson();
 
 //Utilizando promises com async/await
 async function init() {
-    try {
-        await fs.writeFile("teste.txt", "bla bla bla");
-        await fs.appendFile("teste.txt", "\nteste apend file");
-        const data = await fs.readFile("teste.txt", "utf-8");
-        console.log(data);
-    } catch (err) {
-        console.log(err);
-    }
+  try {
+    await fs.writeFile('teste.txt', 'bla bla bla');
+    await fs.appendFile('teste.txt', '\nteste apend file');
+    const data = await fs.readFile('teste.txt', 'utf-8');
+    console.log(data);
+  } catch (err) {
+    console.log(err);
+  }
 }
 
 async function writeReadJson() {
-    try {
-        //escrito com valores iniciais
-        const arrayCarros = [ "Gol", "Palio", "Uno" ];
-        const obj = {
-            carros: arrayCarros            
-        };
-        await fs.writeFile("teste.json", JSON.stringify(obj));
-        
-        //fez a leitura do conteudo atual
-        const data = JSON.parse(await fs.readFile("teste.json"));
+  try {
+    //escrito com valores iniciais
+    const arrayCarros = ['Gol', 'Palio', 'Uno'];
+    const obj = {
+      carros: arrayCarros,
+    };
+    await fs.writeFile('teste.json', JSON.stringify(obj));
 
-        //modificamos o conteudo
-        data.carros.push("Sandero");        
+    //fez a leitura do conteudo atual
+    const data = JSON.parse(await fs.readFile('teste.json'));
 
-        //sobrescrevemos o arquivo com o conteudo modificado
-        await fs.writeFile("teste.json", JSON.stringify(data));
-    } catch (err) {
-        console.log(err);
-    }
+    //modificamos o conteudo
+    data.carros.push('Sandero');
+
+    //sobrescrevemos o arquivo com o conteudo modificado
+    await fs.writeFile('teste.json', JSON.stringify(data));
+  } catch (err) {
+    console.log(err);
+  }
 }
 
 //Utilizando promises
@@ -51,8 +51,6 @@ async function writeReadJson() {
 }).catch(err => {
     console.log(err);
 });*/
-
-
 
 //Utilizando com callbacks
 /*import fs from "fs";
@@ -76,8 +74,6 @@ fs.writeFile("teste.txt", "bla bla bla", function(err) {
         });
     }
 });*/
-
-
 
 //Utilizando de forma sincrona
 /*try {
