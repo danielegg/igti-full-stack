@@ -11,9 +11,10 @@ async function init() {
     ufs = JSON.parse(await fs.readFile('json/Estados.json', 'utf-8'));
     cidades = JSON.parse(await fs.readFile('json/Cidades.json', 'utf-8'));
 
-    cidadesPorUFs();
-    await maisCidades();
-    await menosCidades();
+    await cidadesPorUFs();
+    // await maisCidades();
+    // await menosCidades();
+    await maiorCidadeNome();
 }
 
 async function cidadesPorUFs() {
@@ -23,7 +24,10 @@ async function cidadesPorUFs() {
                 return cidade.Estado === uf.ID;
             });
             //   console.log(cidadesPorUF);
-            await fs.writeFile(`json\\${uf.Sigla}.json`, JSON.stringify(cidadesPorUF));
+            await fs.writeFile(
+                `json\\${uf.Sigla}.json`,
+                JSON.stringify(cidadesPorUF)
+            );
         }
     } catch (error) {
         console.log(error);
@@ -46,7 +50,7 @@ async function maisCidades() {
         for (const uf of ufs) {
             numCidades.push({
                 uf: uf.Sigla,
-                qntCidades: await qntCidades(uf.Sigla)
+                qntCidades: await qntCidades(uf.Sigla),
             });
         }
 
@@ -65,7 +69,7 @@ async function menosCidades() {
         for (const uf of ufs) {
             numCidades.push({
                 uf: uf.Sigla,
-                qntCidades: await qntCidades(uf.Sigla)
+                qntCidades: await qntCidades(uf.Sigla),
             });
         }
 
@@ -84,4 +88,45 @@ async function menosCidades() {
     } catch (error) {
         console.log(error);
     }
+}
+
+let cidadeMaiorNome,
+    cidadeMaiorNomeUF = [];
+async function maiorCidadeNome() {
+    try {
+        for (const uf of ufs) {
+            const ufJson = JSON.parse(
+                await fs.readFile(`json/${uf.Sigla}.json`, 'utf-8')
+                // await fs.readFile(`json/AC.json`, 'utf-8')
+            );
+
+            const cidadeMaiorNome = await ufJson.sort((a, b) => {
+                return b.Nome.length - a.Nome.length;
+            });
+            cidadeMaiorNomeUF.push({
+                Cidade: cidadeMaiorNome[0].Nome,
+                UF: getUFByCidade(cidadeMaiorNome[0].Estado),
+                CidadeQntCaracteres: await contaPalavras(
+                    cidadeMaiorNome[0].Nome
+                ),
+            });
+        }
+
+        cidadeMaiorNomeUF.sort((a, b) => {
+            return b.CidadeQntCaracteres - a.CidadeQntCaracteres;
+        });
+        console.log(cidadeMaiorNomeUF);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+function contaPalavras(str) {
+    return str.length;
+}
+
+function getUFByCidade(ufID) {
+    // console.log('ID = ' + parseInt(ufID));
+    const result = ufs.find((el) => el.ID === ufID);
+    return result.Sigla;
 }
