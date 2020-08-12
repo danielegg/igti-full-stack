@@ -1,11 +1,6 @@
 
-<<<<<<< HEAD
-# Created by https://www.toptal.com/developers/gitignore/api/node,react,visualstudiocode
-# Edit at https://www.toptal.com/developers/gitignore?templates=node,react,visualstudiocode
-=======
-# Created by https://www.toptal.com/developers/gitignore/api/node,visualstudiocode
-# Edit at https://www.toptal.com/developers/gitignore?templates=node,visualstudiocode
->>>>>>> cb2d5e0e6530e7933b5cf497b261f65bf59fc572
+# Created by https://www.toptal.com/developers/gitignore/api/node,visualstudiocode,react
+# Edit at https://www.toptal.com/developers/gitignore?templates=node,visualstudiocode,react
 
 ### Node ###
 # Logs
@@ -116,7 +111,6 @@ dist
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 
-<<<<<<< HEAD
 ### react ###
 .DS_*
 **/*.backup.*
@@ -130,8 +124,6 @@ psd
 thumb
 sketch
 
-=======
->>>>>>> cb2d5e0e6530e7933b5cf497b261f65bf59fc572
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
@@ -143,13 +135,8 @@ sketch
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
 .history
-<<<<<<< HEAD
 
-# End of https://www.toptal.com/developers/gitignore/api/node,react,visualstudiocode
-=======
-
-# End of https://www.toptal.com/developers/gitignore/api/node,visualstudiocode
+# End of https://www.toptal.com/developers/gitignore/api/node,visualstudiocode,react
 
 # Outros
 williancozzi/
->>>>>>> cb2d5e0e6530e7933b5cf497b261f65bf59fc572
