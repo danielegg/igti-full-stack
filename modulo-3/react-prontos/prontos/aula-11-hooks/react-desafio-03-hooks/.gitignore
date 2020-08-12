@@ -1,13 +1,3 @@
-
-<<<<<<< HEAD
-# Created by https://www.toptal.com/developers/gitignore/api/node,react,visualstudiocode
-# Edit at https://www.toptal.com/developers/gitignore?templates=node,react,visualstudiocode
-=======
-# Created by https://www.toptal.com/developers/gitignore/api/node,visualstudiocode
-# Edit at https://www.toptal.com/developers/gitignore?templates=node,visualstudiocode
->>>>>>> cb2d5e0e6530e7933b5cf497b261f65bf59fc572
-
-### Node ###
 # Logs
 logs
 *.log
@@ -94,7 +84,7 @@ dist
 
 # Gatsby files
 .cache/
-# Comment in the public line in if your project uses Gatsby and not Next.js
+# Comment in the public line in if your project uses Gatsby and *not* Next.js
 # https://nextjs.org/blog/next-9-1#public-directory-support
 # public
 
@@ -112,44 +102,3 @@ dist
 
 # TernJS port file
 .tern-port
-
-# Stores VSCode versions used for testing VSCode extensions
-.vscode-test
-
-<<<<<<< HEAD
-### react ###
-.DS_*
-**/*.backup.*
-**/*.back.*
-
-node_modules
-
-*.sublime*
-
-psd
-thumb
-sketch
-
-=======
->>>>>>> cb2d5e0e6530e7933b5cf497b261f65bf59fc572
-### VisualStudioCode ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-*.code-workspace
-
-### VisualStudioCode Patch ###
-# Ignore all local history of files
-.history
-<<<<<<< HEAD
-
-# End of https://www.toptal.com/developers/gitignore/api/node,react,visualstudiocode
-=======
-
-# End of https://www.toptal.com/developers/gitignore/api/node,visualstudiocode
-
-# Outros
-williancozzi/
->>>>>>> cb2d5e0e6530e7933b5cf497b261f65bf59fc572
