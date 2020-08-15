@@ -1,0 +1,19 @@
+Projeto react-calculator
+========================
+
+[x] Criar app com create-react-app
+[x] Converter app para Class Components
+
+[x] Montar constructor e state:
+   - number: 1
+   - calculations: {square: 1, squareRoot: 1, fatorial: 1}
+
+[x] Criar título
+[] Criar input editável que "monitora" this.state.number 
+[] Implementar this.handleInputChange
+
+[] Criar função para realizar os cálculos de quadrado,
+   raiz quadrada e fatorial 
+[] Criar componente InputReadOnly
+[] Inserir 3 InputReadOnly em App.js, um para cada valor de "calculations"
+[] Estilizar app 

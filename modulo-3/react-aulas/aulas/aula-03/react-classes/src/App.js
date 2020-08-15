@@ -3,42 +3,42 @@ import React, { Component } from 'react';
 import { getNewTimestamp } from './helpers/dateTimeHelpers';
 
 export default class App extends Component {
-  constructor() {
-    super();
+    constructor() {
+        super();
 
-    this.state = {
-      clickArray: [],
+        this.state = {
+            clickArray: [],
+        };
+    }
+
+    handleClick = () => {
+        const newClickArray = Object.assign([], this.state.clickArray);
+        newClickArray.push(getNewTimestamp());
+
+        this.setState({ clickArray: newClickArray });
     };
-  }
 
-  handleClick = () => {
-    const newClickArray = Object.assign([], this.state.clickArray);
-    newClickArray.push(getNewTimestamp());
+    componentDidUpdate() {
+        document.title = this.state.clickArray.length.toString();
+    }
 
-    this.setState({ clickArray: newClickArray });
-  };
+    render() {
+        const { clickArray } = this.state;
 
-  componentDidUpdate() {
-    document.title = this.state.clickArray.length.toString();
-  }
+        return (
+            <div>
+                <h1>
+                    React e <em>Class Components</em>
+                </h1>
 
-  render() {
-    const { clickArray } = this.state;
+                <button onClick={this.handleClick}>Clique aqui</button>
 
-    return (
-      <div>
-        <h1>
-          React e <em>Class Components</em>
-        </h1>
-
-        <button onClick={this.handleClick}>Clique aqui</button>
-
-        <ul>
-          {clickArray.map((item) => {
-            return <li key={item}>{item}</li>;
-          })}
-        </ul>
-      </div>
-    );
-  }
+                <ul>
+                    {clickArray.map((item) => {
+                        return <li key={item}>{item}</li>;
+                    })}
+                </ul>
+            </div>
+        );
+    }
 }
